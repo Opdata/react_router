@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Link } from "react-router-dom";
 import About from "./components/About";
 import Home from "./components/Home";
 
@@ -10,6 +10,9 @@ import Home from "./components/Home";
 const App = () => {
   return (
     <div>
+      <Link to="/">홈</Link>
+      <Link to="/about">소개</Link>
+
       <Route path="/" component={Home} exact={true} />
       <Route path="/about" component={About} />
     </div>
